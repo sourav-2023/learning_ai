@@ -1,0 +1,5 @@
+pandas
+ipython
+tensorflow
+keras
+git+https://github.com/google-deepmind/ai-foundations.git@main

@@ -1,0 +1,8 @@
+# Ignore notebook and environment artifacts
+.ipynb_checkpoints/
+__pycache__/
+*.pyc
+.env
+.env.*
+.venv/
+venv/

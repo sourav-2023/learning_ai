@@ -4,11 +4,13 @@ A curated repository of AI learning notes, hands-on notebooks, and small experim
 
 ## What this repo contains
 
-This repository currently focuses on a first course sequence about language modeling fundamentals. The notebooks move from simple probability distributions to training a small language model, making the repo useful both as a study log and as a practical reference.
+This repository currently focuses on a first course sequence about language modeling fundamentals. The notebooks move from simple probability distributions to n-gram models, dataset preparation, and training a small language model.
 
 ## Repository structure
 
 - `course_1/`: a notebook-based learning path covering probability distributions, n-gram models, dataset preparation, and small language model training.
+- `requirements.txt`: common local dependencies for the current notebook set.
+- `.gitignore`: keeps notebook checkpoints and local environment files out of version control.
 
 ## Current learning path
 
@@ -24,6 +26,36 @@ Start with the notebooks in order:
 
 See [course_1/README.md](./course_1/README.md) for notebook-by-notebook details.
 
+## Setup
+
+### Option 1: Google Colab
+
+This is the easiest path for the current notebooks, especially because some notebooks install extra dependencies directly inside the notebook.
+
+### Option 2: Local Jupyter environment
+
+1. Create and activate a virtual environment.
+2. Install the shared dependencies:
+
+```bash
+pip install -r requirements.txt
+```
+
+3. Open the notebooks in Jupyter.
+4. Leave the notebook install cells enabled, because they install the `ai_foundations` package and a few notebook-specific extras.
+
+## Environment notes
+
+The notebooks use Python 3 and rely on packages such as:
+
+- `pandas`
+- `ipython`
+- `tensorflow`
+- `keras`
+- `ai_foundations`
+
+Notebook `1_3` also installs extra JAX and checkpointing dependencies inside the notebook itself. Notebook `1_5` uses Keras with a JAX backend, so Colab is likely to be the smoothest way to run the full sequence.
+
 ## Recommended workflow
 
 - Read each notebook in sequence.
@@ -31,14 +63,9 @@ See [course_1/README.md](./course_1/README.md) for notebook-by-notebook details.
 - Use this repo to track what you learned, not just what you copied.
 - Add new courses as separate folders with their own README files for consistency.
 
-## Environment notes
-
-The current notebooks use Python and rely on common data and notebook tooling such as `pandas`, `tensorflow`, `keras`, and course-specific helpers from `ai_foundations`.
-
-A Jupyter or Colab workflow is the easiest way to run them.
-
 ## Improvement ideas
 
-- Add a `requirements.txt` or environment file once the dependency set stabilizes.
 - Add short reflection notes after each notebook.
+- Add screenshots or output samples once you start customizing the labs.
 - Split future courses into separate folders like `course_2/`, `vision/`, or `agents/`.
+- Add a progress tracker if you want this repo to become your public learning log.
